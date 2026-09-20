@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
 
     private int playerCountValue;
 
+    public bool isExitable = true;
+
     private void Start()
     {
         playerCount.SetActive(false);
@@ -73,8 +75,18 @@ public class GameManager : MonoBehaviour
         StopAllCoroutines();
     }
 
+    private void Update()
+    {
+        if (isExitable && Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
     public void ShowHome()
     {
+        isExitable = true;
+
         playerCount.SetActive(false);
         tapToStartBtn.gameObject.SetActive(true);
         mainPlayer.gameObject.SetActive(true);
@@ -84,6 +96,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        isExitable = false;
         StartCoroutine(GameStartSequence());
     }
 
