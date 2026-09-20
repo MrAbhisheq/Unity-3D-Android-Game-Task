@@ -33,7 +33,7 @@ public class PlatformArea : MonoBehaviour
         }
     }
 
-    [InspectorButton("Create Platforms")]
+    //[InspectorButton("Create Platforms")]
     void CreatePlatforms()
     {
         if (platformPrefab == null)
@@ -82,7 +82,7 @@ public class PlatformArea : MonoBehaviour
         }
     }
 
-    [InspectorButton("Hide Random Blocks")]
+    //[InspectorButton("Hide Random Blocks")]
     void HideRandomBlocks()
     {
         ShowAllBlocks();
@@ -99,7 +99,7 @@ public class PlatformArea : MonoBehaviour
         }
     }
 
-    [InspectorButton("Show All Blocks")]
+    //[InspectorButton("Show All Blocks")]
     void ShowAllBlocks()
     {
         foreach (PlatformBlock block in platformBlocks)

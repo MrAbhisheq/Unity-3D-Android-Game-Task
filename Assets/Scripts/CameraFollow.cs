@@ -15,13 +15,13 @@ public class CameraFollow : MonoBehaviour
         transform.eulerAngles = rotOffset;
     }
 
-    [InspectorButton("Set Camera Position")]
-    void SetCameraPos()
-    {
-        if (player == null)
-            return;
+    //[InspectorButton("Set Camera Position")]
+    //void SetCameraPos()
+    //{
+    //    if (player == null)
+    //        return;
 
-        transform.position = player.position + posOffset;
-        transform.eulerAngles = rotOffset;
-    }
+    //    transform.position = player.position + posOffset;
+    //    transform.eulerAngles = rotOffset;
+    //}
 }
